@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 //set up our express app
 const app = express();
 //connect to mongoDB
@@ -9,6 +10,7 @@ mongoose.Promise = global.Promise;
 app.use(express.static("public"));
 //parse the data to json file
 app.use(express.json());
+app.use(cors());
 //set the app to use the message.routes (will hold our operations)
 app.use("/message", require("./routes/message"));
 //handle errors that occurred during the operations
