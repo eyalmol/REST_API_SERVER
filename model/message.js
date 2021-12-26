@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//create bot1 schema and model
+//create the post schema and model
 const messageSchema = new Schema({
   title: {
     type: String,

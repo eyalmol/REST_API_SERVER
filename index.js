@@ -10,6 +10,7 @@ mongoose.Promise = global.Promise;
 app.use(express.static("public"));
 //parse the data to json file
 app.use(express.json());
+//use cors so that we can run the server and the client side from two diffrent locations
 app.use(cors());
 //set the app to use the message.routes (will hold our operations)
 app.use("/message", require("./routes/message"));
